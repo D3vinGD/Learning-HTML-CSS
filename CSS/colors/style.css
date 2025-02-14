@@ -1,0 +1,12 @@
+.box{
+    margin: 20px;
+    background: #08d5;
+    color: #066;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-top: 5px solid #044;
+
+}

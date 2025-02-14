@@ -1,0 +1,16 @@
+div{
+    background: red;
+    width: 200px;
+    height: 200px;
+}
+h1{
+    background: gold;
+
+}
+input{
+    background: orange;
+    width: 80%;
+}
+form{
+    width: 300px;
+}

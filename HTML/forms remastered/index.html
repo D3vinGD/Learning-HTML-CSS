@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario cachondo</title>
+    <link rel="stylesheet" href="pito.css">
+</head>
+<body>
+   
+    <form action="">
+        <h2 class="titulo">
+            Registro
+        </h2>
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <!-- Text -->
+            <div class="form_input">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" placeholder="Gorge Floyd" id="nombre">
+            </div>
+
+            <div class="form_input">
+                <label for="telefono">Numero de telefono</label>
+                <input type="number" id="telefono" placeholder="1110003344">
+            </div>
+
+            <!-- email -->
+            <div class="form_input">
+                <label for="email">Tu Email</label>
+                <input type="email" placeholder="empanadas@gmail.com" id="email">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Ubicacion</legend>
+
+            <!-- Select & opction -->
+            <div class="form_input">
+                <label for="Pais">Pais</label>
+                <select name="Pais" id="Pais">
+                <option value="">Mexico</option>
+                <option value="">USA</option>
+                <option value="">Brasil</option>
+                <option value="">Cuitzeo</option>
+            </select>
+            </div>
+            <!--Direccion-->
+            <div class="form_input">
+                <label for="direccion">Direccion</label>
+                <input type="text" placeholder="Calle #num" id="direccion">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion Profesional</legend>
+            <!-- Datalist -->
+            <div class="form_input">
+                <label for="carrera_input">Carrera</label>
+                <input list="carreras" id="carrera_input" placeholder="Titulo de tu carrera">
+                <datalist id="carreras">
+                    <option value="IDS">ingenieria en desarrollo de software</option>
+                    <option value="QFB">quimico farmaco biologo</option>
+                    <option value="Alexis">Puta no rentable</option>
+                </datalist>
+            </div>
+            <!-- Text Area -->
+            <div class="form_input">
+                <label for="descripcion">Descripcion</label>
+                <textarea name="" id="descripcion" placeholder="Hablanos de ti" rows="6"></textarea>
+            </div>
+        </fieldset>
+
+        
+        <!-- Checkbox -->
+        <div class="form_input">
+            <label class="check_gay">Acepto los <a href="terms_condicions.html" target="_blank">terminos y condiciones</a>
+                <input type="checkbox" class="checkbox">
+            </label>
+        </div>
+
+        <div class="form_input div_button">
+            <input type="submit" value="Enviar" class="form_button">
+        </div>
+    </form>
+</body>
+</html>

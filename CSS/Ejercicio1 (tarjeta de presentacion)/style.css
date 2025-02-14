@@ -1,0 +1,46 @@
+body{
+    background: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card{
+    background: #2da;
+    text-align: center;
+    width: 400px;
+
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+
+    box-shadow: 0 0 20px 2px #2da9;
+    border-radius: 10px;
+}
+.card_title{
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 5px #fff;
+    font-size: 50px;
+}
+.card_subtitle{
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    color: #eff;
+    text-shadow: 0 0 4px #000;
+}
+.card_content{
+    font-size: 14px;
+    color: #144;
+    letter-spacing: 1.3px;
+    padding: 10px ;
+    padding-bottom: 0;
+    text-align: justify;
+    
+}
+.card_img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 6px solid #4fa;
+    box-shadow: 0 0 10px 3px #5a8;
+}
