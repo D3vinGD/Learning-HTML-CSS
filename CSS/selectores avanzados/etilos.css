@@ -1,0 +1,30 @@
+/*selector por atributo*/
+img[alt="jesus"]{
+    width: 100%;
+}
+
+/*selector por indentacion*/
+ul li{
+    color: aqua;
+}
+
+/*selector por hijo directo*/
+ol>li{
+    color: blue;
+}
+
+/*selector por hermano adyacente*/
+h1+p{
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+/*selector por hermano general*/
+h2~p{
+    background-color: cadetblue;
+}
+
+/*selector multiple*/
+ul,ol{
+    background-color: beige;
+}

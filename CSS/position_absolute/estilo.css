@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+.contenedor{
+    border: 4px solid #500;
+    margin: 10px;
+    position: relative;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    color: #fff;
+    box-sizing: border-box;
+    border: 5px solid #0004;
+}
+.box--blue{
+    background-color: dodgerblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.box--yellow{
+    background-color: goldenrod;
+    position: relative;
+    left: 30px;
+}

@@ -1,0 +1,13 @@
+h1{
+    color: aqua;
+}
+#titulo{
+    color: crimson;
+}
+
+.titulo{
+    color: orange;
+}
+h1{
+    color: blue !important; /*me la fakin pela chaval*/
+}

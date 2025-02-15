@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    color: #fff;
+    position: relative;
+    z-index: 15;
+}
+.box--blue{
+    background-color: dodgerblue;
+    top: -50px;
+    left: 20px;
+    z-index: 10;
+}
+.box--yellow{
+    background-color: goldenrod;
+    top: -70px;
+    z-index: 10;
+}
+.box:first-child{
+    top: 100px;
+    left: 50px;
+}

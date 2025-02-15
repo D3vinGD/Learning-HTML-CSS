@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav{
+    background-color: #f46;
+    padding: 0 20px;
+}
+.nav__list{
+    margin: 0;
+    text-align: right;
+}
+.nav__item{
+    display: inline-block;
+    
+}
+.nav__link{
+    color: #312;
+    text-decoration: none;
+    padding: 10px ;
+    display: inline-block;
+    background-color: #f46;
+}
+.nav__link:hover{
+    background-color: #3125;
+}
+
+
+
+.link--button{
+    background-color: #423;
+    color: #f46;
+    padding: 6px 25px;
+    border-radius: 20px;
+    border: 2px solid #312;
+    margin-left: 50px;
+}
+.link--button:hover{
+    background-color: #f46;
+    border: 2px solid #312;
+    color: #312;
+    padding: 6px 25px;
+}

@@ -1,0 +1,80 @@
+h1{
+    color: crimson;
+}
+/*se activa cuando el cursor esta por encima*/
+h1:hover{
+    color: red;
+    text-shadow: 0 0 10px #f99;
+}
+/*se activa cuando se le da click*/
+h1:active{
+    color: #fff;
+    text-shadow: 0 0 10px #f00 ;
+}
+/*excluye lo que le pongas*/
+li:not(.negro){
+    color: gray;
+}
+/*selecciona al primer elemento*/
+li:first-child{
+    color: aqua;
+}
+/*selecciona al ultimo elemento*/
+li:last-child{
+    color: aqua;
+}
+/*selecciona al elemento que se le indica*/
+li:nth-child(2){
+    color: blue ;
+}
+li:nth-of-type(2n){
+    color: blue;
+}
+
+div{
+    border: 2px solid #000;
+    width: 30%;
+}
+/*si esta vacio*/
+div:empty{
+    border: none    ;
+}
+/*si el enlace ya fue visitado o no*/
+a:link{
+    color: red;
+}
+a:visited{
+    color: green;
+}
+/*si el elemento esta siendo editado*/
+input[type="text"]:focus{
+    color: orange;
+}
+/*si el elemento el valido (input)*/
+input[type="email"]:invalid{
+    color: red;
+}
+input[type="email"]:valid{
+    color: green;
+}
+
+section .elemento1, 
+section .elemento2, 
+section .elemento3{
+    color: blue;
+}
+
+:is(.elemento1,.elemento2,.elemento3){
+    color: red;
+
+}
+section :where(.elemento1,.elemento2,.elemento3){
+    color: yellow;
+}
+
+label:has(input[type="email"]:valid){
+    color: green;
+}
+label:has(input[type="email"]:invalid){
+    color: red;
+}

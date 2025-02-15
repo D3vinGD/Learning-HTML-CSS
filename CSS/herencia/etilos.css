@@ -1,0 +1,29 @@
+body{
+    color: brown;
+    font-family: sans-serif;
+}
+div{
+    width: 50%;
+    text-align: center;
+    background-color: #0003;
+}
+
+p{
+    color: inherit;
+    width: inherit;
+    background-color: inherit;
+}
+ul{
+    width: inherit;
+    background-color: inherit;
+}
+li{
+    width: inherit;
+    background-color: inherit;
+    color: initial;
+}
+a{
+    width: inherit;
+    background-color: inherit;
+    
+}
