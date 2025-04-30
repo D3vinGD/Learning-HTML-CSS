@@ -24,11 +24,9 @@ li:last-child{
     color: aqua;
 }
 /*selecciona al elemento que se le indica*/
-li:nth-child(2){
-    color: blue ;
-}
+
 li:nth-of-type(2n){
-    color: blue;
+    color: blue ;
 }
 
 div{

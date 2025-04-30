@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family:sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    min-height: 100vh;
+    background-color: #161016;
+}
+
+header, nav , main,aside,footer{
+    
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.grid{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: minmax(200px,1fr) minmax(300px,4fr) minmax(200px,1fr);
+    grid-template-rows:  1fr;
+    grid-auto-flow: dense;
+    margin: auto;
+    gap: 10px;
+    padding: 10px;
+    
+
+    grid-template-areas: 
+    "nav main aside"
+    ;
+    
+    max-width: 80%;
+}
+header{
+    background-color: hsl(332, 84%, 63%);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+li{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: hsl(20, 16%, 29%);
+}
+nav{
+    grid-area: nav;
+    background-color: hsl(19, 70%, 82%);
+    border-radius: 10px;
+}
+main{
+    grid-area: main;
+    background-color: hsl(355, 54%, 58%);
+    min-width: 300px;
+    border-radius: 10px;
+}
+aside{
+    grid-area: aside;
+    background-color: hsl(0, 42%, 33%);
+    border-radius: 10px;
+}
+footer{
+    grid-area: footer;
+    width: 100%;
+    padding: 50px;
+    background-color: hsl(337, 57%, 18%);
+    color: aliceblue;
+    text-align: center;
+}
+
+nav,aside{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.grid-container{
+    background-color: aliceblue;
+    min-width: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 10px;
+    padding: 10px;
+
+}
+.grid-item{
+
+    background-image: url("https://media-qro1-2.cdn.whatsapp.net/v/t61.24694-24/485367527_665465346180088_8092673296732281199_n.jpg?ccb=11-4&oh=01_Q5AaIYbPJVt5WI0r30j6y1F5gHgqfT9aOhgbNvxOwAE_7_Pk&oe=6802AA76&_nc_sid=5e03e0&_nc_cat=104");
+    background-size: cover;
+    background-position: center;
+    background-color: aqua;
+    border-radius: 10px;
+}
+.grid-item:first-child{
+    background-image: url("https://media-qro1-2.cdn.whatsapp.net/v/t61.24694-24/484141309_1411853766648330_7428285026894728496_n.jpg?ccb=11-4&oh=01_Q5AaIa01awuI6i6Ax9orULwmqAbzRnW3Je1k23WU37ChxHm4&oe=68001892&_nc_sid=5e03e0&_nc_cat=111");
+    grid-column: 2/ span 4;
+    grid-row: 2/ span 2;
+    background-color: blueviolet;
+}
+@media screen and (max-width:1200px) {
+    .grid{
+        grid-template-columns: minmax(200px,1fr) minmax(300px,4fr);
+    }
+    aside{
+        display: none;
+    }
+    
+}
+
+@media  screen and (max-width: 900px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "nav"
+            "main"
+            "aside"
+        ;
+    }
+    nav, aside{
+        height: auto;
+        position: static;
+    }
+}

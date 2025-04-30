@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+
+}
+.flexbox{
+    border: 4px solid #740b20;
+    margin: 30px;
+    height: 400px;
+
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center; 
+    gap: 10px;
+    
+}
+.flexitem{
+    
+    text-align: center;
+    background-color: #dc143c;
+    
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+
+    flex: 1 3 100px;
+}
+.special{
+    align-self: stretch;
+}
+.flexitem:nth-child(2n){
+    background-color: #faa0b2;
+}
+.flexitem:first-child{
+    background-color: #ff4167;
+    
+}
+.flexitem:last-child{
+    background-color: #740b20;
+}

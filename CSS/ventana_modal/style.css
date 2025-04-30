@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal{
+    box-sizing: border-box;
+    background-color: #0005;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.modal__content{
+    background-color: #fff;
+    width: 60%;
+    padding: 10px 30px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    border-top: 4px solid #000;
+}
+.modal__exitButton{
+    position: absolute;
+    top :0;
+    right: 0;
+    background-color: black;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    padding: 6px 10px;
+}
