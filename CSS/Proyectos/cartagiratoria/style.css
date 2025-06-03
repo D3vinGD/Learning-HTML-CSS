@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body,div,ul,li,a,h1,h2,h3,h4,span,picture,source,img,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    --bg-color: color-mix(in srgb, rgb(185, 202, 224) 30%, #000); /* Fondo oscuro profundo */
+    --card-color: rgb(145, 221, 192); /* Borde o contorno suave verdoso */
+    --light-color: rgb(38, 43, 41); /* Elementos brillantes: botones, efectos */
+    --dark-color: rgb(0, 34, 34); /* Contraste o texto en fondos claros */
+
+
+    --type-card: rgb(180, 49, 49);
+    background-color: var(--bg-color);
+    color: #000e;
+    font-family: work sans;
+    
+    
+    
+}
+
+
+/* Type */
+
+.fire{
+    --type-card: rgb(180, 49, 49);
+}
+.dark{
+    --type-card: rgb(75, 75, 75);
+}
+.electric{
+    --type-card: rgb(103, 10, 116);
+}
+.ice{
+    --type-card: rgb(10, 109, 116);
+}
+.plant{
+    --type-card: rgb(10, 116, 15);
+}
+.water{
+    --type-card: rgb(10, 12, 116);
+}
+/* fondo*/
+.video-container{
+    aspect-ratio: 16/9;
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+    
+    
+}
+.video-container video{
+    width: 100%;
+    filter: hue-rotate(40deg);
+    
+}
+
+
+/* header */
+.header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    filter: drop-shadow(0 0 5px #dfab4a4f);
+    
+}
+.header__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #d8d7da;
+
+    filter: drop-shadow(0 0 5px #4ac1df);
+}
+.header__title{
+    width: 300px;
+}
+
+.wallet{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+
+    padding: 50px 200px;
+}
+
+.card{
+    max-width: clamp(200px,50%, 350px);
+    min-width: 300px;
+    
+    margin: 50px auto;
+    position: relative;
+
+    backface-visibility: hidden;
+    transition: background 3s;
+}
+
+
+.card__back , .card__front{
+    backface-visibility: hidden;
+    transition: transform 1s cubic-bezier(.16,.55,0,1.44);
+    background-color: var(--type-card);
+    border-radius: 20px;
+
+    background-color: var(--type-card);
+    background-image: linear-gradient(to bottom, var(--type-card) 50%, color-mix(in srgb,var(--type-card) 40%, #fff 40%));
+}
+.card:hover .card__front{
+    transform: perspective(1200px) rotateY(360deg);
+    
+}
+.card:hover .card__back{
+    transform: perspective(1200px) rotateY(180deg);
+}
+
+.card__front{
+    
+    transform: perspective(1200px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    border: 6px solid color-mix(in srgb, var(--type-card) 40%, #000 100%);
+    padding: 10px;
+
+    
+}
+
+.card__back{
+    position: absolute;
+    border: 5px solid #000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+    padding: 12px;
+
+    transform: perspective(1200px) rotateY(0deg);
+    background-image: url(img/ceticard.jpg);
+    background-size: 100%;
+    
+}
+.card__picture{
+    max-height: 200px;
+    width: 70%;
+    width: auto;
+    overflow: hidden;
+    display: block;
+    border: 6px solid color-mix(in srgb, var(--type-card) 40%, #000 100%);
+    border-radius: 20px;
+}
+.card__picture img{
+    width: 100%;
+    height: 200px;
+    
+}
+.card__data{
+    padding: 12px;
+}
+.card__data span{
+    font-size: 1rem;
+    width: 100%;
+    border: 2px solid color-mix(in srgb, var(--type-card) 40%, #000 100%);
+    margin: 7px 0;
+    display: block;
+    margin-bottom: 10px;
+    padding: 1px 4px;
+   
+}
+
+.card__data p{
+    font-size: 0.8rem;
+}
+.card__title{
+    
+    display: flex;
+    margin: 10px;
+    margin: 20px 3px 10px auto;
+    
+}
+.card__title h3{
+    margin-right: 20px;
+}
+.card__type{
+    position: absolute;
+    padding: 2px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    background-color: #fff4;
+    
+    border: 1px solid #000;
+    
+    
+}
+.card__type span{
+    font-size: 2rem;
+    color: #000;
+    
+}
+
+.card__stats{
+    border-top: 2px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.stat span{
+    font-size: 1.5rem;
+    padding: 1px;
+    border:1px solid #000;
+    border-radius: 50%;
+    
+}
+.stat p{
+    font-size: 0.8rem;
+    
+}
+
+
+/* CARDS CATEGORY*/
+.legendary {
+    animation: glowLegendary 3s linear infinite;
+    background-image: linear-gradient(
+        135deg,
+        #ffd90094,
+        #ffcc00,
+        #ffaa006e,
+        #ffcc004f,
+        #ffd9004b
+    );
+    background-size: 400% 400%;
+    box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.5),
+                0 0 40px 10px rgba(255, 204, 0, 0.3);
+
+}
+.mythic {
+    animation: policromado-suave 3s infinite alternate;
+        box-shadow: 0 0 20px 5px rgba(255, 23, 243, 0.473),
+                0 0 40px 10px rgba(0, 255, 234, 0.3);
+}
+
+.mythic  .card__data span{
+    background-image: linear-gradient(to right, rgba(4, 255, 213, 0.541), #de98ff);
+    text-shadow: 0 0 5px #fff;
+}
+
+.legendary .card__data span{
+    background-image: linear-gradient(to right, rgba(255, 187, 0, 0.541), #fff098);
+    text-shadow: 0 0 5px #fff;
+}
+.epic .card__data span{
+    background-image: linear-gradient(to right, rgba(174, 0, 255, 0.541), #d198ff);
+    text-shadow: 0 0 5px #fff;
+}
+.epic{
+    filter: drop-shadow(0 0 10px rgb(106, 33, 223));
+       box-shadow: 0 0 20px 5px rgba(255, 23, 243, 0.473),
+                0 0 40px 10px rgba(255, 0, 242, 0.3);
+}
+.unusal .card__data span{
+    background-image: linear-gradient(to right, rgba(21, 83, 216, 0.541), #9ab1e2);
+    text-shadow: 0 0 5px #fff;
+}
+.comun .card__data span{
+    background-image: linear-gradient(to right, rgba(115, 255, 0, 0.541), #a9ff98);
+    text-shadow: 0 0 5px #fff;
+}
+
+
+
+
+
+
+/* animaciones */
+
+@keyframes brilloso {
+    0%{
+        filter: hue-rotate(20deg) brightness(1.4);
+    }
+    50%{
+        filter: hue-rotate(-20deg) brightness(1.5);
+    }
+    100%{
+        filter: hue-rotate(10deg) brightness(1.2);
+    }
+}
+
+@keyframes policromado-suave {
+    0% {
+        filter: hue-rotate(-20deg) brightness(1.5) saturate(1.8) ;
+        
+    }
+    50% {
+        filter: hue-rotate(70deg) brightness(1.4) saturate(2) ;
+        
+    }
+    100% {
+        filter: hue-rotate(-30deg) brightness(1.55) saturate(1.4) ;
+        
+    }
+}
+
+
+
+
+
+@keyframes glowLegendary {
+    0% {
+        background-position: 0% 50%;
+        filter: brightness(1) saturate(1);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: brightness(1.3) saturate(1.5);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(1) saturate(1);
+    }
+}

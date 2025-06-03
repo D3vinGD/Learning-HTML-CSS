@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body,div,ul,li,a,h1,h2,h3,h4,span,picture,source,img,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    --bg-color: color-mix(in srgb, rgb(0, 14, 32) 30%,#000);
+    --cb-color:  rgb(145, 221, 192);
+    --light-color: rgb(24, 161, 120);
+    --dark-color: rgb(0, 34, 34);
+
+    background-color: var(--bg-color);
+    font-family: work sans;
+}
+body{
+    background-color: var(--bg-color);
+}
+.chat{
+    max-width: clamp(300px,60%,700px);
+    background-color: var(--cb-color);
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px  color-mix(in srgb, var(--cb-color) 70%, #1800a1);
+}
+.chat__user{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--dark-color);
+    font-size: 1.5rem;
+}
+.chat__user img{
+    max-width: 3rem;
+    border-radius: 50%;
+    margin: 6px;
+    border: 3px solid var(--dark-color);
+}
+.chat__content{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.msg{
+    background-color: var(--bg-color);
+    color: var(--cb-color);
+    font-size: 0.8rem;
+    padding: 10px 15px;
+
+    border-radius: 9px 9px 9px 0;
+    position: relative;
+    z-index: 10;
+
+    min-width: 100px;
+    max-width: 70%;
+    width: fit-content;
+    margin: 7px;
+}
+
+.msg::before{
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--bg-color);
+    bottom: -4px;
+    left: -7px;
+    clip-path: polygon(43% 0,0% 100%,100% 68%);
+    z-index: -1;
+}
+
+.self{
+    background-color: var(--dark-color);
+    margin-left: auto;
+    border-radius: 9px 9px 0px 9px;
+}
+
+.self:not(:first-child):not(:last-child){
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.self::before{
+    background-color: var(--dark-color);
+    bottom: -4px;
+    left: auto;
+    right: -7px;
+    clip-path: polygon(57% 0,100% 100%,0 68%);
+}

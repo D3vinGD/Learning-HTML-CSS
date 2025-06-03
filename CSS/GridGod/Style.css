@@ -27,6 +27,7 @@ header, nav , main,aside,footer{
     gap: 10px;
     padding: 10px;
     
+    
 
     grid-template-areas: 
     "nav main aside"
